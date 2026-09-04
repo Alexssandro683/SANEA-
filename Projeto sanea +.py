@@ -59,7 +59,7 @@ def excluir_denúncia():
     try:
         escolha = int(input("❌ Digite o número da denúncia que você quer remover: "))
         if 1 <= escolha <= len(denuncias):
-            removida = denuncias.remove(escolha - 1)
+            removida = denuncias.pop(escolha - 1)
             salvar_dados()
             print(f"🗑️ Denúncia '{removida['descricao']}' removida com sucesso!")
         else:
